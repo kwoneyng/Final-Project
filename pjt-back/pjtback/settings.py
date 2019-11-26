@@ -34,6 +34,8 @@ INSTALLED_APPS = [
     'accounts',
     'movies',
 
+    'django_extensions',
+
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -57,7 +59,7 @@ ROOT_URLCONF = 'pjtback.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [os.path.join(BASE_DIR, 'pjtback', 'templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
